@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+    all: unset;
+}
+
+.flx-r {
+    display: flex;
+}
+
+.flx-w {
+    flex-wrap: wrap;
+    margin: 20px 0px 0px 0px
+}
+
+.flx-r-sb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bordered {
+    border: 1px solid #a1a1a1;
+    border-radius: 4px;
+}
+
+.fixed-l {
+    position: fixed;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.sidebar-page {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.forms-page {
+    padding: 0% 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+.secondary-button {
+    background-color: #e7f1ff !important;
+    color: black !important;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1001;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.loader div {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #a2a2a2; /* Blue */
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin 1.5s linear infinite;
+
+    position: absolute;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ----------------- Components ------------- */
+
+.app-menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 0.3% 10.2%;
+    z-index: 1000;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 80px;
+    border-bottom: 2px solid #1e73be;
+}
+
+.app-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.app-menu-pd {
+    height: 70px;
+    width: auto;
+}
+
+.app-menu-unicamp {
+    height: 55px;
+    width: auto;
+}
+
+.app-menu div {
+    display: flex;
+    align-items: center;
+}
+
+.app-menu div * {
+    margin: 0px 12px;
+}
+
+.app-container {
+    padding: 120px 5%;
+    min-height: 100vh;
+}
+
+.app-footer {
+    position: fixed;
+    background-color: white;
+    height: 72px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.app-sidebar-r {
+    position: fixed;
+    right: 48px;
+}
+
+.app-sidebar-l {
+    position: fixed;
+    left: 48px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px;
+}
+
+.question div[name="evidenceRequirement"] {
+    display: flex;
+    align-items: center;
+}
+
+.directory {
+    display: flex;
+    flex-direction: column;
+}
+
+.directory > div {
+    display: flex;
+}
+
+.directory {
+    margin: 0px 16px;
+}
+
+.metric {
+    margin-left: 16px;
+}
+
+.evidences {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 12px 0px;
+}
+
+.evidences > div {
+    margin: 12px 0px 12px 12px;
+}
+
+.evidences a {
+    all: unset;
+    cursor: pointer;
+}
+
+.evidence {
+    display: flex;
+    background: #e5e5e5;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.evidence > * {
+    padding: 0px 8px;
+}
+
+.context-menu {
+    position: absolute;
+    z-index: 1001;
+    background-color: white;
+
+    border: 1px solid #a2a2a2;
+    border-radius: 8px;
+}
+
+.context-menu * {
+    margin: 0px;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 4px 24px;
+}
+
+.metric-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin-bottom: 12px;
+    min-height: 72px;
+}
+
+.metric-list > div {
+    display: flex;
+    align-items: baseline;
+
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin: 4px 8px;
+    height: fit-content;
+}
+
+.metric-list p {
+    margin: 0px;
+}
+
+.forms-card {
+    margin: 12px 0px;
+    padding: 12px 20px;
+}
+
+.forms-card span {
+    margin: 6px;
+    padding: 6px 4px;
+
+    background: #f2f2f2;
+    border-radius: 14px;
+}
+
+.forms-card span:first-of-type {
+    margin-left: 0px;
+}
+
+.forms-card-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms-card-actions-icons {
+    margin: 12px 0px;
+    align-self: flex-end;
+}
+
+.forms-card-actions-access_token > span {
+    border-radius: 4px;
+    padding: 9px;
+}
+
+.forms-card-actions-access_token button {
+    all: unset;
+    border: none;
+    cursor: pointer;
+    margin: 0px 4px;
+}
+
+/* Semantic ui modifications */
+
+.ui.form .disabled.field,
+.ui.form .disabled.fields .field,
+.ui.form .field :disabled {
+    opacity: 0.9 !important;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 50px;
+}
+
+.home-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-text {
+    font-size: 17px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    align-content: left;
+    margin: 0px 50px 10px 50px;
+}
+
+.contact-text {
+    font-size: 16px;
+    margin: 0px 5px 0px 10px;
+}
+
+.home-p {
+    text-indent: 20px;
+    text-Align: justify;
+}
+
+.home-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: left;
+  margin: 0px 50px 0px 50px;
+}
+
+
+.home-logo {
+    height: 440px;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+}
+
+.home-contact {
+    width: 300px;
+
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0px 0px 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home-contact-unit {
+    display: flex;
+    margin: 3px;
+    flex-direction: row;
+    align-content: center;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 80%;
+
+    display: flex;
+}
+
+.forms {
+    display: flex;
+    padding: 0% 0% 0% 8%;
+    flex-direction: row;
+}
+
+.forms-header {
+    padding: 0% 0% 0% 8%;
+}
+
+.icon-forms {
+    padding: 0% 0% 0% 2%;
+    height: 300px;
+    width: auto;
+}
+
+.forms-list {
+    display: flex;
+
+    width: 75%;
+    flex-direction: column;
+}

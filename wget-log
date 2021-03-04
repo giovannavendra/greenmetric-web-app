@@ -1,0 +1,10 @@
+--2021-01-13 16:16:50--  https://www.dropbox.com/sh/qa60xceir3vgrr5/AAD0_L72-PgYJq3LwEL2uz2va?dl=0
+Resolving www.dropbox.com... 162.125.5.18, 2620:100:601d:18::a27d:512
+Connecting to www.dropbox.com|162.125.5.18|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: /sh/raw/qa60xceir3vgrr5/AAD0_L72-PgYJq3LwEL2uz2va [following]
+--2021-01-13 16:16:51--  https://www.dropbox.com/sh/raw/qa60xceir3vgrr5/AAD0_L72-PgYJq3LwEL2uz2va
+Reusing existing connection to www.dropbox.com:443.
+HTTP request sent, awaiting response... 400 Bad Request
+2021-01-13 16:16:51 ERROR 400: Bad Request.
+
